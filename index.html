@@ -4,9 +4,17 @@
        <meta charset="utf-8">
        <meta name="viewport" content="width=device-width, initial-scale=1">
        <title></title>
+       <link rel="preconnect" href="https://fonts.gstatic.com"> 
+       <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <style>
+                                        /*        1 экран*/
+#homepage{opacity: 1; transition:  all ease-in 1s;}
+       
+        body{
+            overflow: hidden;
+        }
         .black_fon {
             position: absolute;
             width: 29vw;
@@ -15,6 +23,7 @@
             top: 0px;
             background: #1D1E23;
         }
+        
         .green_big{
             position: absolute;
             width: 20vw;
@@ -25,15 +34,19 @@
         }
         .orange{
         position: absolute;
-        width: 30vw;
+        width: 24vw;
         height: 50vh;
-        right: 303px;
+        right: 390px;
         bottom: 0;
-        background: #EC673A;  
+        background: #EC673A; 
+        overflow: hidden;
+        display: block;
+        z-index: 3;
+            
         }
         .black_s{
             position: absolute;
-            width: 22vw;
+            width: 27.3vw;
             height: 50vh;
             right: 0;
             bottom: 0;
@@ -45,6 +58,14 @@
             height: 16vh;
             border: 3px solid #5404A6;
         }
+        .window{
+            position: absolute;
+            left: 417px;
+            bottom: 0;
+            width: 10vw;
+            height: 16.5vh;
+            background: #1D1E23;
+        }
         .cub1{left: 559px;bottom: 0;}
         .cub2{left: 417px;bottom: 137px;}
         .cub3{
@@ -55,18 +76,703 @@
             bottom: 274px;
             border: 3px solid #FE303F;
         }
+        .cub4{
+           position: absolute; 
+           border: 3px solid #FE303F;
+           width: 28.6vw;
+           height: 50vh;
+           left: 0px;
+           bottom: 0px; 
         }
-    </style>
+        .cub5{
+            position: relative;
+            border: 3px solid #FE303F;
+            width: 100%;
+            height: 140px;
+            left: -3px;
+            top: -3px;
+        }
+        
+        .heading{
+            position: absolute;
+            top: 190px;
+            right: 162px;
+            display: block;
+            z-index: 8;
+        }
+        .white_klyksa{
+            position: absolute;
+            right: 400px;
+            bottom: 300px;
+            width: 700px;
+        }
+        .spine{
+            position: absolute;
+            left: 280px;
+            top: 150px;
+            display: block;
+            z-index: 6;
+            height: 200px;
+            width: 520px;
+        }
+        .kolsa{
+            position: absolute;
+            width: 300px;
+            left: 100px;
+            top: 70px;
+        }
+        .color_klyksa{
+            position: absolute;
+            left: -10px;
+            bottom: -10px;
+            
+        }
+        .turkaR{
+            position: absolute;
+            top: 0;
+            right: 148px;
+            width: 244px;
+            height: 340px;
+        }
+        .to_turka{
+            position: absolute;
+            top: 0px;
+            right: 100px;
+            width: 350px;
+            height: 300px;
+        }
+        .to_toDolist{
+            position: absolute;
+            width: 350px;
+            height: 350px;
+            left: 20px;
+            top: 40px;
+            animation: infinite-spinning 6s linear infinite;
+        }
+        @keyframes infinite-spinning {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+        .skrepka{
+            position: absolute;
+            left: -60px;
+        }
+        .single_skrepka{
+            position: absolute;
+            top: 140px;
+            left: 80px;
+            animation: hinge 4s ease infinite;
+        }
+        @keyframes hinge {
+  0% {
+    -webkit-transform: rotate(0);
+    -ms-transform: rotate(0);
+    transform: rotate(0);
+    -webkit-transform-origin: top left;
+    -ms-transform-origin: top left;
+    transform-origin: top left;
+    -webkit-animation-timing-function: ease-in-out;
+    animation-timing-function: ease-in-out;
+  }
+
+  20%, 60% {
+    -webkit-transform: rotate(80deg);
+    -ms-transform: rotate(80deg);
+    transform: rotate(80deg);
+    -webkit-transform-origin: top left;
+    -ms-transform-origin: top left;
+    transform-origin: top left;
+    -webkit-animation-timing-function: ease-in-out;
+    animation-timing-function: ease-in-out;
+  }
+
+  40% {
+    -webkit-transform: rotate(60deg);
+    -ms-transform: rotate(60deg);
+    transform: rotate(60deg);
+    -webkit-transform-origin: top left;
+    -ms-transform-origin: top left;
+    transform-origin: top left;
+    -webkit-animation-timing-function: ease-in-out;
+    animation-timing-function: ease-in-out;
+  }
+
+  80% {
+    -webkit-transform: rotate(60deg) translateY(0);
+    -ms-transform: rotate(60deg) translateY(0);
+    transform: rotate(60deg) translateY(0);
+    -webkit-transform-origin: top left;
+    -ms-transform-origin: top left;
+    transform-origin: top left;
+    -webkit-animation-timing-function: ease-in-out;
+    animation-timing-function: ease-in-out;
+    opacity: 1;
+  }
+
+  100% {
+    -webkit-transform: translateY(700px);
+    -ms-transform: translateY(700px);
+    transform: translateY(700px);
+    opacity: 0;
+  }
+}
+                                                            
+                                                                                /*        2 экран*/
+ #random{opacity: 0; transition: all ease-in 2s;}
+        
+                   .H1{
+               position: absolute;
+               left: 90px;
+               bottom: 400px;
+               display: block;
+               z-index: 8;
+           }
+           
+/*           <--Pytna-->*/
+           .stain{
+               top: 0;
+               right: 0;
+               position: absolute;
+               display: block;
+               z-index: 1;
+           }
+           .stain_2{
+               left: 0;
+               bottom: 100px;
+               position: absolute;
+              display: block;
+           }
+           .stain_3{
+             right: 0;
+               bottom: 0;
+               position: absolute;
+           }
+           
+/*        <--To Do list-->   */
+           
+           .ToDo1,.ToDo2,.ToDo3,.ToDo4,.ToDo5,.ToDo6{
+               max-width: 50%;
+               padding: 3px 5px; 
+               background: white;
+               border: 1px outset black;
+               border-radius: 30px 0 30px 0;
+               height: 60px;
+               margin-left: auto;
+               margin-right: auto;   
+               position: relative;
+               z-index: 10;
+           }
+
+           .box_item {
+               margin-top: -60px;
+               transition: all .9s;
+                   
+           }
+           .box-long .box_item {
+               margin-top: 20px;
+           }
+           
+           .box_item:first-child {
+               margin-top: 100px;
+           }
+           
+/*         <--  trigger-->     */
+           
+           .trigger{
+               position: absolute;
+               top: 0;
+               right: 200px;
+               z-index: 8; 
+               animation: bounce 2s ease infinite;
+           }
+        @keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    -webkit-transform: translateY(0);
+    -ms-transform: translateY(0);
+    transform: translateY(0);
+  }
+
+  40% {
+    -webkit-transform: translateY(-30px);
+    -ms-transform: translateY(-30px);
+    transform: translateY(-30px);
+  }
+
+  60% {
+    -webkit-transform: translateY(-15px);
+    -ms-transform: translateY(-15px);
+    transform: translateY(-15px);
+  }
+}
+
+
+           /* <--bottons-->*/
+.back {
+    opacity: 0.7;
+    position: absolute;
+    cursor: pointer;
+    top: 40px;
+    left: 50px;
+    transition: all .1s;
+}
+        
+.back:hover {
+    opacity: 1;
+    transition: all .1s;
+}
+ .question {
+     position: absolute;
+     cursor: pointer;
+     bottom: 40px;
+     left: 50px;  
+     transition: all .1s;
+     opacity: 0.7;
+ }
+ .question:hover {
+     opacity: 1;
+     transition: all .1s;
+ }
+           .play, .play_click{
+               position: absolute;
+               cursor:pointer;
+               margin-left: auto;
+               margin-right: auto;
+           }
+           .play{
+               opacity: 0.99;
+               shape-rendering: "crispEdges";
+           }
+           .play_click{
+               opacity: 0;
+               transition: all .1s;
+           }
+           .play_click:hover{
+               opacity: 1;
+               transition: all .1s;
+           }
+           
+           #button,#button2,#button3,#button4,#button5,#button6 {
+               background-color: #f4511e;
+               width: 30px;
+               height: 30px;
+               border-radius: 50%;
+               border: none;
+               opacity: 0.6;
+               transition: 0.3s;
+               cursor: pointer;
+               position: absolute;
+               right: 20px;
+               top: 15px;
+}
+           
+           #button:hover{opacity: 1}
+           #button2:hover{opacity: 1}
+           #button3:hover{opacity: 1}
+           #button4:hover{opacity: 1}
+           #button5:hover{opacity: 1}
+           #button6:hover {opacity: 1}
+              
+           p{
+               font-family: 'Montserrat', sans-serif;
+               font-size: 26px;
+               padding-left: 20px;
+               margin: 10px;
+               color: black;
+               display: block;
+               z-index: 10;
+           }
+/*                                                                                     3 экран*/
+        #table{opacity: 0; transition: all ease-in 2s;}
+        
+        .nastole{
+               position: absolute;
+               left: 150px;
+               z-index: 12;
+               bottom: 150px;
+            display: block;
+           }
+           .vgolove{
+               position: absolute;
+               right: 232px;
+               top: 100px;
+               z-index: 10;
+               display: block;
+           }
+                          .back{
+                              opacity: 0.7;
+                              position: absolute;
+                              cursor: pointer;
+                              top: 40px;
+                              left: 50px;
+                              transition: all .1s;
+                          }
+        
+                          .back:hover{
+                              opacity: 1;
+                              transition: all .1s;
+                          }                   
+                           .qustion{
+                               opacity: 0.7;
+                              position: absolute;
+                              cursor: pointer;
+                              top: 40px;
+                              left: 50px;
+                              transition: all .1s;
+                           }
+        
+                           .question:hover{
+                               opacity: 1;
+                               transition: all .1s;
+                           }
+           .snoska{
+               position: absolute;
+               left: 110px;
+               bottom: 36px;
+               width: 250px;
+               height: 36px;
+               text-align: left;
+               opacity: 0;
+           }
+           p{
+               font-family: 'Montserrat', sans-serif;
+               font-size: 14px;
+               color: #3C3C3C;
+               margin: 0;
+               display: none;
+           }
+           
+           .list {  
+               position: absolute;
+               left: 400px;
+               top: 300px;
+           }
+           .notebook {
+            position: absolute;
+               left: 400px;
+               top: 200px;
+               width: 450px;
+               height: 450px;
+           }
+           .ruler{
+               position: absolute;
+               left: 520px;
+               top: 240px;
+           }
+           .pen{
+               position: absolute;
+               left: 520px;
+               top: 340px;
+           }
+           .eraser{
+               position: absolute;
+               right: 700px;
+               bottom: 220px;
+           }
+           .knife{
+               position: absolute;
+               right: 500px;
+               bottom: 80px;
+           }
+           .bbrush{
+               position: absolute;
+               right: 500px;
+               top: 260px;
+           }
+           .sbrush{
+              position: absolute;
+               left: 800px;
+               top: 200px;
+           }
+           .s1, .s2, .s3, .s4, .s5{
+               position: absolute;
+           } 
+           .s2{
+               left: 400px;
+               top: 380px;
+           }
+           .s1{
+               left: 400px;
+               top: 400px;
+           }
+           .s3{
+              right: 480px;
+               top: 360px;
+           }
+           .s4{
+               right: 460px;
+               top: 350px;
+           }
+           .s5{
+               right: 490px;
+               top: 340px;
+           }
+           .marker{
+               position: absolute;
+               left: 350px;
+               top: 600px;
+           }
+            
+    </style> 
     
-        <body>
-            <div class="black_fon"></div>
-            <div class="green_big"></div>
-            <div class="orange"></div>
-            <div class="orange_small"></div>
-            <div class="black_s"></div>
-            <div class="cub1"></div>
-            <div class="cub2"></div>
-            <div class="cub3"></div>
+ <script>
+          $(document).ready(function(){
+              $( ".to_toDolist" ).click(function() {
+                    $( "#homepage" ).css("opacity","0");
+            });
+               $( ".to_toDolist" ).click(function() {
+                    $( "#random" ).css("opacity","1");
+            });
+               $( ".to_toDolist" ).click(function() {
+                    $( "body" ).css("background-color","#1D1E23");
+            });
+              $(".back").click(function(){
+                  $("#random").css("opacity","0");
+              });
+              $(".back").click(function(){
+                  $("#homepage").css("opacity","1");
+              });
+              $( ".skrepka" ).click(function() {
+                    $( "#homepage" ).css("opacity","0");
+            });
+               $( ".skrepka" ).click(function() {
+                    $( "#table" ).css("opacity","1");
+            });
+              $(".back").click(function(){
+                  $("#table").css("opacity","0");
+              });
+              $(".back").click(function(){
+                  $("#homepage").css("opacity","1");
+              });
+              $(".back").click(function(){
+                  $("body").css("background-color","#FFFFFF");
+              });
+           });  
+     </script> 
+                
+<!--                                                                              random                      -->
+     <script>
+           $(document).ready(function(){
+              $( "body" ).click(function() {
+                    $( ".H1" ).fadeOut("5000");
+            });
+               
+           });   
+       </script>
+       
+       <script>
+           $(document).ready(function(){
+              $( ".trigger" ).click(function() {
+                    $( ".box" ).toggleClass("box-long");
+            });
+               
+           });   
+       </script>
+       
+       <script>
+           let oddtrivia = []
+           oddtrivia[0] = "Встать с той ноги";
+           oddtrivia[1] = "Не наступить в кошачий лоток при выходе из дома";
+           oddtrivia[2] = "Сгенерировать 10 новых идей";
+           
+           function oddTrivia(){
+               let randomTrivia = Math.floor(Math.random()*(oddtrivia.length));
+               document.getElementById('ptrivia').innerHTML = oddtrivia[randomTrivia];
+           }
+       </script>
+       
+       <script>
+           let oddtrivia2 = []
+           oddtrivia2[0] = "Проверить почту";
+           oddtrivia2[1] = "Приготовить потрясающе вкусный завтрак";
+           oddtrivia2[2] = "Улыбнуться прохожему";
+           
+           function oddTrivia2(){
+               let randomTrivia2 = Math.floor(Math.random()*(oddtrivia2.length));
+               document.getElementById('ptrivia2').innerHTML = oddtrivia2[randomTrivia2];
+           }
+       </script>
+       
+           <script>
+           let oddtrivia3 = []
+           oddtrivia3[0] = "Заглянуть в арт-протстранство «BUDINA»";
+           oddtrivia3[1] = "30 минут медитации";
+           oddtrivia3[2] = "Созвон по рабочим делам";
+           
+           function oddTrivia3(){
+               let randomTrivia3 = Math.floor(Math.random()*(oddtrivia3.length));
+               document.getElementById('ptrivia3').innerHTML = oddtrivia3[randomTrivia3];
+           }
+       </script>
+        
+         <script>
+           let oddtrivia4 = []
+           oddtrivia4[0] = "Найти вдохновение";
+           oddtrivia4[1] = "Прочитать биогрфию успешного человека";
+           oddtrivia4[2] = "Выпить 8 стаканов воды";
+           
+           function oddTrivia4(){
+               let randomTrivia4 = Math.floor(Math.random()*(oddtrivia4.length));
+               document.getElementById('ptrivia4').innerHTML = oddtrivia4[randomTrivia4];
+           }
+       </script>
+       
+        <script>
+           let oddtrivia5 = []
+           oddtrivia5[0] = "Поставить цели на месяц";
+           oddtrivia5[1] = "Убраться в доме";
+           oddtrivia5[2] = "Обзор и анализ рынка";
+           
+           function oddTrivia5(){
+               let randomTrivia5 = Math.floor(Math.random()*(oddtrivia5.length));
+               document.getElementById('ptrivia5').innerHTML = oddtrivia5[randomTrivia5];
+           }
+       </script>
+       
+       <script>
+           let oddtrivia6 = []
+           oddtrivia6[0] = "Сделать перестановку в доме";
+           oddtrivia6[1] = "Похвалить себя";
+           oddtrivia6[2] = "Проверить, как идут дела в Кремниевой Долине";
+           
+           function oddTrivia6(){
+               let randomTrivia6 = Math.floor(Math.random()*(oddtrivia6.length));
+               document.getElementById('ptrivia6').innerHTML = oddtrivia6[randomTrivia6];
+           }
+       </script>
+       
+         
+<!--                                                                               table-->
+      <script type="text/javascript"></script>
+       <script>$(function() {
+	$(".svg img").draggable();});
+       </script>
+      
+      <script>
+           $(document).ready(function(){
+              $( "body" ).click(function() {
+                    $( ".nastole, .vgolove" ).fadeOut("5000");
+            });
+               
+           });   
+       </script>
+       
+       <script>
+            $(document).ready(function(){
+                $(".question").hover(function(){
+                    $(".snoska").css("opacity","1")
+                        
+                    });
+                });
+       </script>
+       
+ <body>
+                                    <!--        1  экран-->
+<section id="homepage">
+     <div class="black_fon"></div>
+     <div class="green_big"></div>
+     <div class="window"></div>
+     <div class="orange">
+         <img class="skrepka" src="HomePage/rituals/css/images/Group%2038.svg">
+         <img class="single_skrepka" src= "HomePage/rituals/css/images/Vector%2062.svg">
+     </div>
+     <div class="orange_small"></div>
+     <div class="black_s">
+         <img class="to_toDolist" src= "HomePage/rituals/css/images/Asset%207@20x%201.png">
+     </div>
+     <div class="cub1"></div>
+     <div class="cub2"></div>
+     <div class="cub3"></div>
+     <div class="cub4">
+         <div class="cub5"></div>
+     </div>
+     
+     <img class="heading" src="HomePage/rituals/css/images/Group%2039.svg">
+     <img class="turkaR" src="HomePage/rituals/css/images/Exclude.svg">
+     <img class="to_turka" src= "HomePage/rituals/css/images/Group.png">
+     <img class="white_klyksa" src= "HomePage/rituals/css/images/Union.png">
+     <img class="spine" src="HomePage/rituals/css/images/Rectangle.png">
+     <img class="kolsa" src="HomePage/rituals/css/images/kolsa.png">
+     <img class="color_klyksa" src= "HomePage/rituals/css/images/Rectangle%C2%A0%E2%80%94%20%D0%BA%D0%BE%D0%BF%D0%B8%D1%8F.svg">
+     
+ </section>                      
+                                    <!--       2 экран-->
+<section id="random">
+           
+    <img class="H1" src="HomePage/rituals/css/images/%D0%A0%D0%B0%D0%BDfrom%D0%B4%D0%BE%D0%BC.svg">
+          
+     <div class="box">
+            <div class="ToDo1 box_item " >
+                <button id="button" onclick="oddTrivia()"></button>
+                <p id="ptrivia"></p>
+            </div>
+            <div class="ToDo2 box_item">
+            <button id="button2" onclick="oddTrivia2()"></button>
+            <p id="ptrivia2"></p>
+            </div>
+            <div class="ToDo3 box_item">
+                <button id="button3" onclick="oddTrivia3()"></button>
+            <p id="ptrivia3"></p>
+            </div>
+            <div class="ToDo4 box_item">
+                <button id="button4" onclick="oddTrivia4()"></button>
+            <p id="ptrivia4"></p>
+            </div>
+            <div class="ToDo5 box_item">
+                <button id="button5" onclick="oddTrivia5()"></button>
+            <p id="ptrivia5"></p>
+            </div>
+            <div class="ToDo6 box_item">
+                <button id="button6" onclick="oddTrivia6()"></button>
+            <p id="ptrivia6"></p>
+            </div>
+     </div>
+            
+<!--            trigger-->
+           
+     <img class="trigger" src= "HomePage/rituals/css/images/%D0%B2%D0%B8%D1%81%D1%8E%D0%BB%D1%8C%D0%BA%D0%B0.svg">
+           
+            
+<!--            botton-->
+           <img class="back" src="HomePage/rituals/css/images/%D0%BD%D0%B0%D0%B7%D0%B0%D0%B4.svg">
+             <img class="question" src="HomePage/rituals/css/images/%D0%B2%D0%BE%D0%BF%D1%80%D0%BE%D1%81.svg">
+            
+<!--  Pytna          -->
+            <img class="stain" src="HomePage/rituals/css/images/Rectangle.svg">
+            <img class="stain_2" src="HomePage/rituals/css/images/Rectangle_2.svg">
+            <img class="stain_3" src="HomePage/rituals/css/images/Rectangle_3.svg">
+            </section>
+                               
+                                <!--                    3 экран        -->
+ <section id="table">
+       <img class="nastole" src="HomePage/rituals/css/images/%D0%9F%D0%BE%D1%80%D1%8F%D0%B4%D0%BE%D0%BA%20%D0%BD%D0%B0%20%D1%81%D1%82%D0%BE%D0%BB%D0%B5.svg">
+       <img class="vgolove" src= "HomePage/rituals/css/images/%D0%9F%D0%BE%D1%80%D1%8F%D0%B4%D0%BE%D0%BA%20%D0%B2%20%D0%B3%D0%BE%D0%BB%D0%BE%D0%B2%D0%B5.svg">   
+   <div class="svg">
+       <img class="list" src="HomePage/rituals/css/images/Rectangle%20119.svg">
+       <img class="notebook" src= "HomePagerituals/css/images/%D0%B1%D0%BB%D0%BE%D0%BA%D0%BD%D0%BE%D1%82.png">
+       <img class="ruler" src="HomePage/rituals/css/images/%D0%BB%D0%B8%D0%BD%D0%B5%D0%B9%D0%BA%D0%B0.svg">
+       <img class="pen" src="HomePage/rituals/css/images/%D0%BA%D0%B0%D1%80%D0%B0%D0%BD%D0%B4%D0%B0%D1%88.svg">
+       <img class="eraser" src="HomePage/rituals/css/images/%D1%80%D0%B5%D0%B7%D0%B8%D0%BD%D0%BA%D0%B0.svg">
+       <img class="knife" src="HomePage/rituals/css/images/%D0%BD%D0%BE%D0%B6.svg">
+       <img class="bbrush" src="HomePage/rituals/css/images/%20%D0%B1%D0%BE%D0%BB%D1%8C%D1%88%D0%B0%D1%8F%20%D0%BA%D0%B8%D1%81%D1%82%D1%8C.svg">
+       <img class="sbrush" src="HomePage/rituals/css/images/%D0%BA%D0%B8%D1%81%D1%82%D0%BE%D1%87%D0%BA%D0%B040.svg">
+       <img class="marker" src= "HomePage/rituals/css/images/%D0%BC%D0%B0%D1%80%D0%BA%D0%B5%D1%80.svg">
+       <img class="s1" src="HomePage/rituals/css/images/Vector%2064.svg">
+       <img class="s2" src="HomePage/rituals/css/images/Vector%206020.svg">
+       <img class="s3" src="HomePage/rituals/css/images/Vector%2056.svg">
+       <img class="s4" src="HomePage/rituals/css/images/Vector%2057.svg">
+       <img class="s5" src="HomePage/rituals/css/images/Vector%2058.svg">     
+   </div>
+ <!--            botton-->
+            <img class="back" src="HomePage/rituals/css/images/%D0%BD%D0%B0%D0%B7%D0%B0%D0%B4.svg">
+            <img class="question" src="HomePage/rituals/css/images/%D0%B2%D0%BE%D0%BF%D1%80%D0%BE%D1%81.svg">
+           <div class="snoska">
+             <p>Чтобы прибрать рабочее место, двигай объекты по экрану </p>
+             </div>
+             </section>
         </body>
     </head>
 </html>
