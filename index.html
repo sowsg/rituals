@@ -251,6 +251,12 @@
                bottom: 0;
                position: absolute;
            }
+        #H1{
+            position: absolute;
+            left: 150px;
+            z-index: 12;
+            bottom: 150px;
+        }
            
 /*        <--To Do list-->   */
            
@@ -533,16 +539,7 @@
            });  
      </script> 
                 
-<!--                                                                              random                      -->
-     <script>
-           $(document).ready(function(){
-              $( "body" ).click(function() {
-                    $( ".H1" ).fadeOut("5000");
-            });
-               
-           });   
-       </script>
-       
+<!--                                                                              random                      -->   
        <script>
            $(document).ready(function(){
               $( ".trigger" ).click(function() {
@@ -640,6 +637,15 @@
            });   
        </script>
   
+       <script>
+           $(document).ready(function(){
+              $( "#random" ).click(function() {
+                    $( "#H1" ).fadeOut("5000");
+            });
+               
+           });   
+       </script>
+  
  <body>
                                     <!--        1  экран-->
 <section id="homepage">
@@ -673,7 +679,7 @@
                                     <!--       2 экран-->
 <section id="random">
            
-    <img class="H1" src="css/images/%D0%A0%D0%B0%D0%BDfrom%D0%B4%D0%BE%D0%BC.svg">
+    <img id="H1" src="css/images/%D0%A0%D0%B0%D0%BDfrom%D0%B4%D0%BE%D0%BC.svg">
           
      <div class="box">
             <div class="ToDo1 box_item " >
