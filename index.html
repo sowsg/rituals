@@ -336,24 +336,6 @@
      opacity: 1;
      transition: all .1s;
  }
-           .play, .play_click{
-               position: absolute;
-               cursor:pointer;
-               margin-left: auto;
-               margin-right: auto;
-           }
-           .play{
-               opacity: 0.99;
-               shape-rendering: "crispEdges";
-           }
-           .play_click{
-               opacity: 0;
-               transition: all .1s;
-           }
-           .play_click:hover{
-               opacity: 1;
-               transition: all .1s;
-           }
            
            #button,#button2,#button3,#button4,#button5,#button6 {
                background-color: #f4511e;
@@ -376,31 +358,30 @@
            #button5:hover{opacity: 1}
            #button6:hover {opacity: 1}
               
-           p{
+          
+/*                                                                                     3 экран*/
+        #table{opacity: 0; transition: all ease-in 2s;}
+        
+         p{
                font-family: 'Montserrat', sans-serif;
-               font-size: 26px;
-               padding-left: 20px;
-               margin: 10px;
+               font-size: 24px;
+               margin: 12px;
                color: black;
                display: block;
                z-index: 10;
            }
-/*                                                                                     3 экран*/
-        #table{opacity: 0; transition: all ease-in 2s;}
         
-        .nastole{
+        #nastole{
                position: absolute;
                left: 150px;
                z-index: 12;
                bottom: 150px;
-            display: block;
            }
-           .vgolove{
+           #vgolove{
                position: absolute;
                right: 232px;
                top: 100px;
                z-index: 10;
-               display: block;
            }
                           .back{
                               opacity: 0.7;
@@ -437,12 +418,11 @@
                text-align: left;
                opacity: 0;
            }
-           p{
+           .snoska p{
                font-family: 'Montserrat', sans-serif;
-               font-size: 14px;
+               font-size: 12px;
                color: #3C3C3C;
                margin: 0;
-               display: none;
            }
            
            .list {  
@@ -611,7 +591,7 @@
          <script>
            let oddtrivia4 = []
            oddtrivia4[0] = "Найти вдохновение";
-           oddtrivia4[1] = "Прочитать биогрфию успешного человека";
+           oddtrivia4[1] = "Прочитать биографию успешного человека";
            oddtrivia4[2] = "Выпить 8 стаканов воды";
            
            function oddTrivia4(){
@@ -653,22 +633,13 @@
       
       <script>
            $(document).ready(function(){
-              $( "body" ).click(function() {
-                    $( ".nastole, .vgolove" ).fadeOut("5000");
+              $( "#table" ).click(function() {
+                    $( "#vgolove, #nastole" ).fadeOut("5000");
             });
                
            });   
        </script>
-       
-       <script>
-            $(document).ready(function(){
-                $(".question").hover(function(){
-                    $(".snoska").css("opacity","1")
-                        
-                    });
-                });
-       </script>
-       
+  
  <body>
                                     <!--        1  экран-->
 <section id="homepage">
@@ -676,12 +647,12 @@
      <div class="green_big"></div>
      <div class="window"></div>
      <div class="orange">
-         <img class="skrepka" src="HomePage/rituals/css/images/Group%2038.svg">
-         <img class="single_skrepka" src= "HomePage/rituals/css/images/Vector%2062.svg">
+         <img class="skrepka" src="css/images/Group%2038.svg">
+         <img class="single_skrepka" src= "css/images/Vector%2062.svg">
      </div>
      <div class="orange_small"></div>
      <div class="black_s">
-         <img class="to_toDolist" src= "HomePage/rituals/css/images/Asset%207@20x%201.png">
+         <img class="to_toDolist" src= "css/images/Asset%207@20x%201.png">
      </div>
      <div class="cub1"></div>
      <div class="cub2"></div>
@@ -690,19 +661,19 @@
          <div class="cub5"></div>
      </div>
      
-     <img class="heading" src="HomePage/rituals/css/images/Group%2039.svg">
-     <img class="turkaR" src="HomePage/rituals/css/images/Exclude.svg">
-     <img class="to_turka" src= "HomePage/rituals/css/images/Group.png">
-     <img class="white_klyksa" src= "HomePage/rituals/css/images/Union.png">
-     <img class="spine" src="HomePage/rituals/css/images/Rectangle.png">
-     <img class="kolsa" src="HomePage/rituals/css/images/kolsa.png">
-     <img class="color_klyksa" src= "HomePage/rituals/css/images/Rectangle%C2%A0%E2%80%94%20%D0%BA%D0%BE%D0%BF%D0%B8%D1%8F.svg">
+     <img class="heading" src="css/images/Group%2039.svg">
+     <img class="turkaR" src="css/images/Exclude.svg">
+     <img class="to_turka" src= "css/images/Group.png">
+     <img class="white_klyksa" src= "css/images/Union.png">
+     <img class="spine" src="css/images/Rectangle.png">
+     <img class="kolsa" src="css/images/kolsa.png">
+     <img class="color_klyksa" src= "css/images/Rectangle%C2%A0%E2%80%94%20%D0%BA%D0%BE%D0%BF%D0%B8%D1%8F.svg">
      
  </section>                      
                                     <!--       2 экран-->
 <section id="random">
            
-    <img class="H1" src="HomePage/rituals/css/images/%D0%A0%D0%B0%D0%BDfrom%D0%B4%D0%BE%D0%BC.svg">
+    <img class="H1" src="css/images/%D0%A0%D0%B0%D0%BDfrom%D0%B4%D0%BE%D0%BC.svg">
           
      <div class="box">
             <div class="ToDo1 box_item " >
@@ -733,42 +704,44 @@
             
 <!--            trigger-->
            
-     <img class="trigger" src= "HomePage/rituals/css/images/%D0%B2%D0%B8%D1%81%D1%8E%D0%BB%D1%8C%D0%BA%D0%B0.svg">
+     <img class="trigger" src= "css/images/%D0%B2%D0%B8%D1%81%D1%8E%D0%BB%D1%8C%D0%BA%D0%B0.svg">
            
             
 <!--            botton-->
-           <img class="back" src="HomePage/rituals/css/images/%D0%BD%D0%B0%D0%B7%D0%B0%D0%B4.svg">
-             <img class="question" src="HomePage/rituals/css/images/%D0%B2%D0%BE%D0%BF%D1%80%D0%BE%D1%81.svg">
+           <img class="back" src="css/images/%D0%BD%D0%B0%D0%B7%D0%B0%D0%B4.svg">
+             <img class="question" src="css/images/%D0%B2%D0%BE%D0%BF%D1%80%D0%BE%D1%81.svg">
             
 <!--  Pytna          -->
-            <img class="stain" src="HomePage/rituals/css/images/Rectangle.svg">
-            <img class="stain_2" src="HomePage/rituals/css/images/Rectangle_2.svg">
-            <img class="stain_3" src="HomePage/rituals/css/images/Rectangle_3.svg">
+            <img class="stain" src="css/images/Rectangle.svg">
+            <img class="stain_2" src="css/images/Rectangle_2.svg">
+            <img class="stain_3" src="css/images/Rectangle_3.svg">
             </section>
                                
                                 <!--                    3 экран        -->
  <section id="table">
-       <img class="nastole" src="HomePage/rituals/css/images/%D0%9F%D0%BE%D1%80%D1%8F%D0%B4%D0%BE%D0%BA%20%D0%BD%D0%B0%20%D1%81%D1%82%D0%BE%D0%BB%D0%B5.svg">
-       <img class="vgolove" src= "HomePage/rituals/css/images/%D0%9F%D0%BE%D1%80%D1%8F%D0%B4%D0%BE%D0%BA%20%D0%B2%20%D0%B3%D0%BE%D0%BB%D0%BE%D0%B2%D0%B5.svg">   
-   <div class="svg">
-       <img class="list" src="HomePage/rituals/css/images/Rectangle%20119.svg">
-       <img class="notebook" src= "HomePagerituals/css/images/%D0%B1%D0%BB%D0%BE%D0%BA%D0%BD%D0%BE%D1%82.png">
-       <img class="ruler" src="HomePage/rituals/css/images/%D0%BB%D0%B8%D0%BD%D0%B5%D0%B9%D0%BA%D0%B0.svg">
-       <img class="pen" src="HomePage/rituals/css/images/%D0%BA%D0%B0%D1%80%D0%B0%D0%BD%D0%B4%D0%B0%D1%88.svg">
-       <img class="eraser" src="HomePage/rituals/css/images/%D1%80%D0%B5%D0%B7%D0%B8%D0%BD%D0%BA%D0%B0.svg">
-       <img class="knife" src="HomePage/rituals/css/images/%D0%BD%D0%BE%D0%B6.svg">
-       <img class="bbrush" src="HomePage/rituals/css/images/%20%D0%B1%D0%BE%D0%BB%D1%8C%D1%88%D0%B0%D1%8F%20%D0%BA%D0%B8%D1%81%D1%82%D1%8C.svg">
-       <img class="sbrush" src="HomePage/rituals/css/images/%D0%BA%D0%B8%D1%81%D1%82%D0%BE%D1%87%D0%BA%D0%B040.svg">
-       <img class="marker" src= "HomePage/rituals/css/images/%D0%BC%D0%B0%D1%80%D0%BA%D0%B5%D1%80.svg">
-       <img class="s1" src="HomePage/rituals/css/images/Vector%2064.svg">
-       <img class="s2" src="HomePage/rituals/css/images/Vector%206020.svg">
-       <img class="s3" src="HomePage/rituals/css/images/Vector%2056.svg">
-       <img class="s4" src="HomePage/rituals/css/images/Vector%2057.svg">
-       <img class="s5" src="HomePage/rituals/css/images/Vector%2058.svg">     
+      
+       <img id="nastole" src="css/images/%D0%9F%D0%BE%D1%80%D1%8F%D0%B4%D0%BE%D0%BA%20%D0%BD%D0%B0%20%D1%81%D1%82%D0%BE%D0%BB%D0%B5.svg" >
+       <img id="vgolove" src= "css/images/%D0%9F%D0%BE%D1%80%D1%8F%D0%B4%D0%BE%D0%BA%20%D0%B2%20%D0%B3%D0%BE%D0%BB%D0%BE%D0%B2%D0%B5.svg" >   
+   
+    <div class="svg">
+       <img class="list" src="css/images/Rectangle%20119.svg">
+       <img class="notebook" src= "css/images/%D0%B1%D0%BB%D0%BE%D0%BA%D0%BD%D0%BE%D1%82.png">
+       <img class="ruler" src="css/images/%D0%BB%D0%B8%D0%BD%D0%B5%D0%B9%D0%BA%D0%B0.svg">
+       <img class="pen" src="css/images/%D0%BA%D0%B0%D1%80%D0%B0%D0%BD%D0%B4%D0%B0%D1%88.svg">
+       <img class="eraser" src="css/images/%D1%80%D0%B5%D0%B7%D0%B8%D0%BD%D0%BA%D0%B0.svg">
+       <img class="knife" src="css/images/%D0%BD%D0%BE%D0%B6.svg">
+       <img class="bbrush" src="css/images/%20%D0%B1%D0%BE%D0%BB%D1%8C%D1%88%D0%B0%D1%8F%20%D0%BA%D0%B8%D1%81%D1%82%D1%8C.svg">
+       <img class="sbrush" src="css/images/%D0%BA%D0%B8%D1%81%D1%82%D0%BE%D1%87%D0%BA%D0%B040.svg">
+       <img class="marker" src= "css/images/%D0%BC%D0%B0%D1%80%D0%BA%D0%B5%D1%80.svg">
+       <img class="s1" src="css/images/Vector%2064.svg">
+       <img class="s2" src="css/images/Vector%206020.svg">
+       <img class="s3" src="css/images/Vector%2056.svg">
+       <img class="s4" src="css/images/Vector%2057.svg">
+       <img class="s5" src="css/images/Vector%2058.svg">     
    </div>
  <!--            botton-->
-            <img class="back" src="HomePage/rituals/css/images/%D0%BD%D0%B0%D0%B7%D0%B0%D0%B4.svg">
-            <img class="question" src="HomePage/rituals/css/images/%D0%B2%D0%BE%D0%BF%D1%80%D0%BE%D1%81.svg">
+            <img class="back" src="css/images/%D0%BD%D0%B0%D0%B7%D0%B0%D0%B4.svg">
+            <img class="question" src="css/images/%D0%B2%D0%BE%D0%BF%D1%80%D0%BE%D1%81.svg">
            <div class="snoska">
              <p>Чтобы прибрать рабочее место, двигай объекты по экрану </p>
              </div>
